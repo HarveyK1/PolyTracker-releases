@@ -1,8 +1,10 @@
 # PolyTracker
 
-[![Stars](https://img.shields.io/github/stars/HarveyK1/Rise-Alarm?style=for-the-badge)](https://github.com/HarveyK1/Rise-Alarm/stargazers)
-[![Watchers](https://img.shields.io/github/watchers/HarveyK1/Rise-Alarm?style=for-the-badge)](https://github.com/HarveyK1/Rise-Alarm/watchers)
-[![Total Views](https://hits.sh/github.com/HarveyK1/Rise-Alarm.svg?view=total&style=for-the-badge&label=total%20views)](https://hits.sh/github.com/HarveyK1/Rise-Alarm/)
+[![Stars](https://img.shields.io/github/stars/HarveyK1/PolyTracker-releases?style=for-the-badge)](https://github.com/HarveyK1/PolyTracker-releases/stargazers)
+[![Watchers](https://img.shields.io/github/watchers/HarveyK1/PolyTracker-releases?style=for-the-badge)](https://github.com/HarveyK1/PolyTracker-releases/watchers)
+[![Latest release](https://img.shields.io/github/v/release/HarveyK1/PolyTracker-releases?style=for-the-badge&label=latest)](https://github.com/HarveyK1/PolyTracker-releases/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/HarveyK1/PolyTracker-releases/total?style=for-the-badge)](https://github.com/HarveyK1/PolyTracker-releases/releases)
+[![Total Views](https://hits.sh/github.com/HarveyK1/PolyTracker-releases.svg?view=total&style=for-the-badge&label=total%20views)](https://hits.sh/github.com/HarveyK1/PolyTracker-releases/)
 
 A desktop tracker for [Polymarket](https://polymarket.com) prediction markets, for Windows.
 It shows live prices and order books, your portfolio and P&L, top traders and whales, news matched
