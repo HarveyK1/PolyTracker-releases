@@ -13,7 +13,7 @@ can't place, cancel or sign trades.
 
 ### [⬇ Download the latest version](https://github.com/HarveyK1/PolyTracker-releases/releases/latest)
 
-Under **Assets**, download `PolyTracker-<version>-windows-x64.zip`.
+Under **Assets**, download `PolyTracker-Setup-<version>.exe`.
 
 This repository holds the released versions only.
 
@@ -21,26 +21,23 @@ This repository holds the released versions only.
 
 ## Install
 
-1. **Extract the zip:** right-click it, then **Extract All**. The installer doesn't work from
-   inside the zip.
-2. In the extracted folder, double-click **Install PolyTracker**.
-3. Windows may warn you, because PolyTracker isn't signed with a paid certificate:
-   - *Open File – Security Warning*: click **Run**.
-   - *Windows protected your PC*: click **More info**, then **Run anyway**.
-4. PolyTracker opens when it's done. It's in your Start menu and on your desktop.
+1. Run the `PolyTracker-Setup-<version>.exe` you downloaded.
+2. Windows may warn you, because PolyTracker isn't signed with a paid certificate. On *Windows
+   protected your PC*, click **More info**, then **Run anyway**.
+3. Follow the wizard: choose whether you want a desktop shortcut, then click **Install**.
+4. Leave **Launch PolyTracker** ticked on the last page to open it. It's also in your Start menu.
 
 It installs just for you, in `%LOCALAPPDATA%\Programs\PolyTracker`, and needs no administrator
-rights. You can delete the zip and the extracted folder afterwards.
+rights. Everything it needs comes with it. You can delete the downloaded Setup afterwards.
 
-**Needs:** Windows 10 or 11 (64-bit), and Microsoft's
-[Visual C++ Redistributable (x64)](https://aka.ms/vs/17/release/vc_redist.x64.exe), which most PCs
-already have. The installer checks for it and tells you if it's missing.
+**Needs:** Windows 10 or 11 (64-bit).
 
 ## Updates
 
 PolyTracker looks for a new version when it starts and every few hours. When one is out,
 **Update to …** appears at the bottom right of the window. Click it to see what's new, then
-**Update now**. PolyTracker downloads the new version, checks it, closes, installs it and reopens.
+**Update now**. PolyTracker downloads the new version, checks it, closes, installs it with just a
+progress bar, and reopens.
 Your data and settings are kept.
 
 You can also check yourself in **Settings → About → Check now**.
@@ -69,12 +66,12 @@ it's there if you install PolyTracker again.
 
 ## Checking a download
 
-Each release lists the zip's SHA-256 checksum, and has a `.sha256` file beside it. PolyTracker's
-updater checks this itself. To check a zip you downloaded by hand, run this in PowerShell and
+Each release lists the Setup's SHA-256 checksum, and has a `.sha256` file beside it. PolyTracker's
+updater checks this itself. To check a Setup you downloaded by hand, run this in PowerShell and
 compare the result:
 
 ```powershell
-Get-FileHash .\PolyTracker-<version>-windows-x64.zip -Algorithm SHA256
+Get-FileHash .\PolyTracker-Setup-<version>.exe -Algorithm SHA256
 ```
 
 ## Help
