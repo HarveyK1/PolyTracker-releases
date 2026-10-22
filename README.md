@@ -1,5 +1,11 @@
 # PolyTracker
 
+[![Stars](https://img.shields.io/github/stars/HarveyK1/Rise-Alarm?style=for-the-badge)](https://github.com/HarveyK1/Rise-Alarm/stargazers)
+[![Watchers](https://img.shields.io/github/watchers/HarveyK1/Rise-Alarm?style=for-the-badge)](https://github.com/HarveyK1/Rise-Alarm/watchers)
+[![Forks](https://img.shields.io/github/forks/HarveyK1/Rise-Alarm?style=for-the-badge)](https://github.com/HarveyK1/Rise-Alarm/forks)
+[![License](https://img.shields.io/github/license/HarveyK1/Rise-Alarm?style=for-the-badge)](https://github.com/HarveyK1/Rise-Alarm/blob/main/LICENSE)
+[![Total Views](https://hits.sh/github.com/HarveyK1/Rise-Alarm.svg?view=total&style=for-the-badge&label=total%20views)](https://hits.sh/github.com/HarveyK1/Rise-Alarm/)
+
 A desktop tracker for [Polymarket](https://polymarket.com) prediction markets, for Windows.
 It shows live prices and order books, your portfolio and P&L, top traders and whales, news matched
 to markets, and alerts on your desktop or phone.
