@@ -37,7 +37,7 @@ rights. Everything it needs comes with it. You can delete the downloaded Setup a
 
 ## Updates
 
-PolyTracker looks for a new version when it starts and every few hours. When one is out,
+PolyTracker looks for a new version when it starts and every few minutes. When one is out,
 **Update to …** appears at the bottom right of the window. Click it to see what's new, then
 **Update now**. PolyTracker downloads the new version, checks it, closes, installs it with just a
 progress bar, and reopens.
@@ -55,13 +55,16 @@ it's there if you install PolyTracker again.
 
 - **Read-only:** it reads Polymarket's public data and public wallet activity. Wallet addresses and
   positions on Polymarket are public; tracking one only reads what anyone can see on polymarket.com.
-- **Your data stays on your PC,** in `%LOCALAPPDATA%\PolyTracker`. There's no account and no usage
-  tracking.
+- **Your data stays on your PC,** in `%LOCALAPPDATA%\PolyTracker`. There's no account, and nothing
+  about what you do in the app is sent anywhere.
 - **What it connects to:**
   - Polymarket, for markets and wallets
   - the news sources you turn on
   - a public Polygon node, for a wallet's cash balance
   - GitHub (this page), to look for updates
+  - once a day, an anonymous count that a copy is in use: a random id it made for itself, its
+    version and Windows's name (no names, wallets or IP addresses are kept), so the developer can
+    see how many copies are in use
   - X, Discord and Telegram, only if you connect them yourself (those sign-ins and keys are kept in
     Windows Credential Manager)
 - **Not financial advice:** estimates, "edges" and suggested sizes are calculations from public
