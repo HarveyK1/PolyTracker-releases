@@ -42,7 +42,7 @@ PolyTracker looks for a new version when it starts and every few hours. When one
 progress bar, and reopens.
 Your data and settings are kept.
 
-You can also check yourself in **Settings → About → Check now**.
+You can also check yourself in **Settings → Updates → Check now**.
 
 ## Uninstall
 
