@@ -17,7 +17,8 @@ can't place, cancel or sign trades.
 
 Under **Assets**, download `PolyTracker-Setup-<version>.exe`.
 
-This repository holds the released versions only.
+This repository holds the released versions only. Only the newest one can be downloaded: older releases keep their notes, so
+you can see what changed, but not their Setups.
 
 ---
 
