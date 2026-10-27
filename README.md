@@ -6,19 +6,85 @@
 [![Downloads](https://img.shields.io/github/downloads/HarveyK1/PolyTracker-releases/total?style=for-the-badge)](https://github.com/HarveyK1/PolyTracker-releases/releases)
 [![Total Views](https://hits.sh/github.com/HarveyK1/PolyTracker-releases.svg?view=total&style=for-the-badge&label=total%20views)](https://hits.sh/github.com/HarveyK1/PolyTracker-releases/)
 
-A desktop tracker for [Polymarket](https://polymarket.com) prediction markets, for Windows.
-It shows live prices and order books, your portfolio and P&L, top traders and whales, news matched
-to markets, and alerts on your desktop or phone.
+A desktop tracker for [Polymarket](https://polymarket.com) prediction markets, for Windows. Live
+prices and order books, games as they're played, your portfolio and P&L, top traders and whales, news
+matched to markets, and alerts on your desktop or phone.
 
 **It only reads public data.** It never asks for a private key, seed phrase or password, and it
 can't place, cancel or sign trades.
 
 ### [⬇ Download the latest version](https://github.com/HarveyK1/PolyTracker-releases/releases/latest)
 
-Under **Assets**, download `PolyTracker-Setup-<version>.exe`.
+Under **Assets**, download `PolyTracker-Setup-<version>.exe`, then see [Install](#install).
 
-This repository holds the released versions only. Only the newest one can be downloaded: older releases keep their notes, so
-you can see what changed, but not their Setups.
+![PolyTracker's markets table](images/markets.png)
+
+---
+
+## What it does
+
+### Every market, live
+
+The 1,500 busiest markets in one table: price, 24-hour change, a week's sparkline, spread, volume,
+liquidity, and when it ends. Sort it, filter it, and star the ones you care about. The markets you're
+looking at, have starred or hold update the moment their price moves.
+
+### Games as they happen
+
+A game's page puts all of its markets side by side (who wins, every spread and total) and explains
+each in plain words. The score and clock update live, and once it's over it says when a result has
+been proposed or disputed. **Ending soon** lists what finishes today and this week, with each game
+shown once.
+
+![A live game's page](images/market.png)
+
+### A second opinion on every price
+
+Four ways of judging a price: the market itself, its 24-hour average, a slower week-long average, and
+your own guess. For each, PolyTracker shows how far the price is from it, what that's worth per
+dollar after the cost of buying, and a cautious bet size. **Opportunities** ranks the biggest gaps,
+flags events whose prices add up to more than 100%, and keeps score of which approach has been right.
+
+| | |
+|---|---|
+| ![Dashboard](images/dashboard.png) | ![Opportunities](images/opportunities.png) |
+
+### Wallets, traders and whales
+
+- **Portfolio:** any public wallet's positions, P&L over time, what it's exposed to, a P&L calendar,
+  and a warning when two bets on one game work against each other.
+- **Traders:** look anyone up by name or wallet for their win rate, biggest wins and losses, open
+  bets and trade history. Star your favourites, or browse the top traders.
+- **Whales:** the biggest trades on Polymarket as they happen. A bot's order that fills in many
+  pieces shows as one bet with its total.
+
+### News that moves markets
+
+A live feed from Bluesky, 27 news sites and Google News, each story matched to the markets it's about,
+with how much the price has moved since. Every market's page shows its own related news. X can be
+added with a spare account.
+
+| | |
+|---|---|
+| ![Ending soon](images/ending.png) | ![News](images/news.png) |
+
+### Alerts, and a price window that stays on top
+
+- **Alerts** for price targets, sharp moves, big trades, news, markets ending or settling, your P&L,
+  and traders you follow, on your desktop or your phone through Discord or Telegram.
+- **Mini price window:** a small window that stays above everything else, with the live prices of the
+  markets you hold and have starred, so you can follow a game while doing something else. Turn it on
+  in **Settings → Appearance**.
+
+<p>
+  <img src="images/mini.png" width="260" alt="Mini price window">
+  <img src="images/settings.png" width="540" alt="Settings: updates and appearance">
+</p>
+
+### And more
+
+Export to CSV or JSON, Ctrl+P to jump anywhere, dark and light themes, prices in percent or cents,
+and a full guide built in (**Wiki**, bottom left).
 
 ---
 
@@ -35,15 +101,17 @@ rights. Everything it needs comes with it. You can delete the downloaded Setup a
 
 **Needs:** Windows 10 or 11 (64-bit).
 
+This page holds the released versions only. Only the newest can be downloaded: older releases keep
+their notes, so you can see what changed, but not their Setups.
+
 ## Updates
 
-PolyTracker looks for a new version when it starts and every few minutes. When one is out,
+PolyTracker looks for a new version when it starts and every 5 minutes. When one is out,
 **Update to …** appears at the bottom right of the window. Click it to see what's new, then
 **Update now**. PolyTracker downloads the new version, checks it, closes, installs it with just a
-progress bar, and reopens.
-Your data and settings are kept.
+progress bar, and reopens. Your data and settings are kept.
 
-You can also check yourself in **Settings → Updates → Check now**.
+**Settings → Updates** shows your version, every recent version's notes, and **Check now**.
 
 ## Uninstall
 
@@ -63,8 +131,7 @@ it's there if you install PolyTracker again.
   - a public Polygon node, for a wallet's cash balance
   - GitHub (this page), to look for updates
   - once a day, an anonymous count that a copy is in use: a random id it made for itself, its
-    version and Windows's name (no names, wallets or IP addresses are kept), so the developer can
-    see how many copies are in use
+    version and Windows's name (no names, wallets or IP addresses are kept)
   - X, Discord and Telegram, only if you connect them yourself (those sign-ins and keys are kept in
     Windows Credential Manager)
 - **Not financial advice:** estimates, "edges" and suggested sizes are calculations from public
