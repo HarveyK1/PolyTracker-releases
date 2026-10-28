@@ -6,7 +6,7 @@
 [![Downloads](https://img.shields.io/github/downloads/HarveyK1/PolyTracker-releases/total?style=for-the-badge)](https://github.com/HarveyK1/PolyTracker-releases/releases)
 [![Total Views](https://hits.sh/github.com/HarveyK1/PolyTracker-releases.svg?view=total&style=for-the-badge&label=total%20views)](https://hits.sh/github.com/HarveyK1/PolyTracker-releases/)
 
-A desktop tracker for [Polymarket](https://polymarket.com) prediction markets, for Windows. Live
+A desktop tracker for [Polymarket](https://polymarket.com) prediction markets, for Windows and Linux. Live
 prices and order books, games as they're played, your portfolio and P&L, top traders and whales, news
 matched to markets, and alerts on your desktop or phone.
 
@@ -15,7 +15,9 @@ can't place, cancel or sign trades.
 
 ### [⬇ Download the latest version](https://github.com/HarveyK1/PolyTracker-releases/releases/latest)
 
-Under **Assets**, download `PolyTracker-Setup-<version>.exe`, then see [Install](#install).
+Under **Assets**, download `PolyTracker-Setup-<version>.exe`, then see [Install](#install). On Linux
+(from version 0.6.40), download `PolyTracker-<version>-x86_64.AppImage` instead: see
+[Install on Linux](#install-on-linux).
 
 ![PolyTracker's markets table](images/markets.png)
 
@@ -99,17 +101,49 @@ and a full guide built in (**Wiki**, bottom left).
 It installs just for you, in `%LOCALAPPDATA%\Programs\PolyTracker`, and needs no administrator
 rights. Everything it needs comes with it. You can delete the downloaded Setup afterwards.
 
-**Needs:** Windows 10 or 11 (64-bit).
+**Needs:** Windows 10 or 11 (64-bit). For Linux, see [Install on Linux](#install-on-linux).
 
 This page holds the released versions only. Only the newest can be downloaded: older releases keep
 their notes, so you can see what changed, but not their Setups.
+
+## Install on Linux
+
+From version 0.6.40. PolyTracker for Linux is one file, an AppImage, with everything it needs inside:
+nothing is installed.
+
+1. Download `PolyTracker-<version>-x86_64.AppImage` from the latest release.
+2. Make it executable: right-click it, **Properties**, then tick **Allow executing as program** (or
+   **Is executable**), or run `chmod +x PolyTracker-*.AppImage`.
+3. Double-click it. Keep it somewhere of your own, such as your home folder or `~/Applications`, so it
+   can update itself.
+
+Your data is kept in `~/.local/share/PolyTracker` and your settings in `~/.config/PolyTracker`.
+
+**What your Linux needs.** A normal desktop install (Ubuntu, Fedora, Mint, CachyOS with KDE or
+GNOME) already has everything. A minimal install may need some of these:
+
+| For | Needed | Ubuntu / Debian | Fedora | Arch / CachyOS |
+|---|---|---|---|---|
+| Starting at all | FUSE (or start it with `--appimage-extract-and-run`) | `fuse3` | `fuse3` | `fuse3` |
+| The window, on Wayland | XWayland | `xwayland` | `xorg-x11-server-Xwayland` | `xorg-xwayland` |
+| The window, if it says it "could not load the Qt platform plugin xcb" | xcb-cursor | `libxcb-cursor0` | `xcb-util-cursor` | `xcb-util-cursor` |
+| X news | Python 3 | `python3` | `python3` | `python` |
+| X sign-in and phone alerts | a keyring (KDE Wallet on KDE) | `gnome-keyring` | `gnome-keyring` | `gnome-keyring` |
+| Desktop pop-ups on plain GNOME | a tray | `gnome-shell-extension-appindicator` | `gnome-shell-extension-appindicator` | `gnome-shell-extension-appindicator` |
+
+Install them with `sudo apt install …`, `sudo dnf install …` or `sudo pacman -S …`. Without the
+last three, everything else still works. It needs a system from about 2022 or later; older ones,
+such as Ubuntu 20.04 or Debian 11, can't start it.
+
+**Uninstall:** delete the AppImage, and the two folders above if you don't want to keep your data.
 
 ## Updates
 
 PolyTracker looks for a new version when it starts and every 5 minutes. When one is out,
 **Update to …** appears at the bottom right of the window. Click it to see what's new, then
 **Update now**. PolyTracker downloads the new version, checks it, closes, installs it with just a
-progress bar, and reopens. Your data and settings are kept.
+progress bar, and reopens. Your data and settings are kept. On Linux, the new AppImage replaces the
+old one in the same place.
 
 **Settings → Updates** shows your version, every recent version's notes, and **Check now**.
 
@@ -123,17 +157,18 @@ it's there if you install PolyTracker again.
 
 - **Read-only:** it reads Polymarket's public data and public wallet activity. Wallet addresses and
   positions on Polymarket are public; tracking one only reads what anyone can see on polymarket.com.
-- **Your data stays on your PC,** in `%LOCALAPPDATA%\PolyTracker`. There's no account, and nothing
-  about what you do in the app is sent anywhere.
+- **Your data stays on your PC,** in `%LOCALAPPDATA%\PolyTracker` (on Linux,
+  `~/.local/share/PolyTracker`). There's no account, and nothing about what you do in the app is sent
+  anywhere.
 - **What it connects to:**
   - Polymarket, for markets and wallets
   - the news sources you turn on
   - a public Polygon node, for a wallet's cash balance
   - GitHub (this page), to look for updates
   - once a day, an anonymous count that a copy is in use: a random id it made for itself, its
-    version and Windows's name (no names, wallets or IP addresses are kept)
+    version and the system's name, such as "Windows 11" (no names, wallets or IP addresses are kept)
   - X, Discord and Telegram, only if you connect them yourself (those sign-ins and keys are kept in
-    Windows Credential Manager)
+    Windows Credential Manager, or on Linux in your keyring)
 - **Not financial advice:** estimates, "edges" and suggested sizes are calculations from public
   prices, not recommendations.
 
